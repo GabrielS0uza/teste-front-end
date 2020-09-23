@@ -1,0 +1,174 @@
+.form-cadastro-wrap {
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 600px;
+}
+
+.input-group:first-child {
+  margin: 0;
+}
+
+.input-group label {
+  padding-bottom: 10px;
+}
+
+.input-group input {
+  padding: 5px 0;
+  outline: 0;
+  border-width: 0 0 2px;
+  font-size: 20px;
+  color: #333333;
+  border-color: #efeeed;
+}
+
+.input-group input:focus {
+  color: #333333;
+  border-color: #333333;
+}
+
+.input-group .erro-input,
+.input-group .erro-input:focus {
+  color: #eb4a46;
+  border-color: #eb4a46;
+}
+
+.btn-cadastrar {
+  padding: 10px;
+  background-color: #00c8b3;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  border-radius: 3em;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  opacity: 0.7;
+}
+
+.btn-cadastrar:focus {
+  outline: 0;
+}
+
+.btn-cadastrar:disabled {
+  color: #dddcdc;
+  background-color: #f6f6f6;
+}
+
+.erro-mensagem {
+  font-size: 13px;
+  color: #eb4a46;
+  margin-top: 3px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Esconde as setas do input tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*::placeholder {
+  color: #dddcdc;
+}
+
+/* ========== LOADER ========== */
+
+.loader {
+  font-size: 10px;
+  margin: 0 auto;
+  text-indent: -9999em;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(
+    left,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loader:after {
+  background: #0dc5c1;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== RESPONSIVO ========== */
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .input-group {
+    width: 90%;
+  }
+}

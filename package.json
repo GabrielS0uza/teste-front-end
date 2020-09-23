@@ -1,0 +1,15 @@
+{
+  "name": "teste-front-end",
+  "version": "1.0.0",
+  "author": "Gabriel Souza",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server src/",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "live-server": "^1.2.1"
+  }
+}

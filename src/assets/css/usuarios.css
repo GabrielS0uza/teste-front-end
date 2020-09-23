@@ -1,0 +1,159 @@
+#usuarios-table {
+  display: block;
+  height: calc(100% - 60px);
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+#usuarios-table tbody tr,
+#usuarios-table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+#usuarios-table thead {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#usuarios-table thead tr {
+  height: 60px;
+  font-size: 16px;
+}
+
+#usuarios-table tbody td,
+#usuarios-table thead th {
+  padding: 15px 25px;
+  text-align: left;
+}
+
+#usuarios-table tbody {
+  display: block;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+#usuarios-table tbody tr {
+  border-bottom: 1px solid #efeeed;
+}
+
+#usuarios-table tbody td,
+#usuarios-table thead th {
+  padding: 15px 25px;
+  text-align: left;
+}
+
+/* ========== BOTÕES ========== */
+
+.btn-excluir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eb4a46;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.btn-excluir:hover {
+  background: #efeeed;
+}
+
+/* ==================== RESPONSIVO ==================== */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #usuarios-table thead th:nth-child(3),
+  #usuarios-table tbody td:nth-child(3) {
+    width: 15%;
+  }
+
+  #usuarios-table thead th:last-child,
+  #usuarios-table tbody td:last-child {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  #usuarios-wrap {
+    padding: 15px;
+  }
+
+  #usuarios-table-top-bar button span {
+    font-size: 0;
+  }
+
+  #usuarios-table-top-bar button span span {
+    margin: 0;
+  }
+
+  #usuarios-table-top-bar h1 {
+    font-size: 22px;
+  }
+
+  #usuarios-table thead th:last-child,
+  #usuarios-table tbody td:last-child {
+    display: flex;
+    width: auto;
+  }
+
+  #usuarios-table tbody {
+    height: 100%;
+  }
+
+  #usuarios-table,
+  #usuarios-table thead,
+  #usuarios-table tbody,
+  #usuarios-table th,
+  #usuarios-table td,
+  #usuarios-table tr {
+    display: block;
+  }
+
+  #usuarios-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #usuarios-table tr {
+    border-bottom: 1px solid #333333 !important;
+  }
+
+  #usuarios-table tbody td {
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 1px solid #efeeed;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #usuarios-table td:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  #usuarios-table td:nth-of-type(1):before {
+    content: "Nome";
+  }
+  #usuarios-table td:nth-of-type(2):before {
+    content: "CPF";
+  }
+  #usuarios-table td:nth-of-type(3):before {
+    content: "Telefone";
+  }
+  #usuarios-table td:nth-of-type(4):before {
+    content: "E-mail";
+  }
+  #usuarios-table td:nth-of-type(5):before {
+    content: "Ações";
+  }
+}
